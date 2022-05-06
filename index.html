@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+
+    <form id="animateForm" action="./assets/php/csvReader.php" method="POST" enctype="multipart/form-data">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="control-label">Upload File</label>
+              <div class="preview-zone hidden">
+                <div class="box box-solid">
+                  <div class="box-header with-border">
+                    <div><b>Preview</b></div>
+                    <div class="box-tools pull-right">
+                      <button type="button" class="btn btn-danger btn-xs remove-preview"><i class="fa fa-times"></i> Reset This Form</button>
+                    </div>
+                  </div>
+                  <div class="box-body"></div>
+                </div>
+              </div>
+              <div class="dropzone-wrapper">
+                <div class="dropzone-desc">
+                  <i class="glyphicon glyphicon-download-alt"></i>
+                  <p>Click to Add CSV file</p>
+                </div>
+                <input id="csvHolder" type="file" name="csv" value="" class="dropzone" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" id="processCSV" class="btn btn-primary pull-right">Upload</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <section id="ajax_updatedCSV"></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+      integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./assets/js/dragDrop.js"></script>
+    <script src="./assets/js/submit.js"></script>
+  </body>
+</html>
